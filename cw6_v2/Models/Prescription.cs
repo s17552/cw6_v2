@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace cw6_v2.Models
@@ -20,7 +21,9 @@ namespace cw6_v2.Models
         public int IdPatient { get; set; }
         public Doctor Patient { get; set; }
         
-        
-        
+        public List<PrescriptionMedicament> PrescriptionMedicaments { get; set; }
+
+
+
     }
 }

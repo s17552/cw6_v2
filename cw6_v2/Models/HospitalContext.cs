@@ -11,5 +11,19 @@ namespace cw6_v2.Models
         public HospitalContext(DbContextOptions options) : base(options)
         {
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Doctor>().HasData(
+                new Doctor
+                {
+                    IdDoctor = 1,
+                    FirstName = "Ferdek",
+                    LastName = "Kiepski",
+                    Email = "FerdekKiepski@gmail.com"
+                }
+            );
+        }
+        
     }
 }
